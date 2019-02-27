@@ -1,0 +1,11 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: "didstopia/sdl2"
+    steps:
+      - checkout
+      - run:
+          name: build
+          command: cd ./game && make && cd ../
